@@ -1,10 +1,7 @@
 #!/usr/bin/env bash
-if command -v php >/dev/null 2>&1; then
-    echo "OK tool php"
-else
-    echo "MISSING tool php"
-    exit 2
-fi
+set -u
+root="$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")/.." && pwd)" || exit 2
+fail=0
 #!/usr/bin/env bash
 set -u
 root="$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")/.." && pwd)" || exit 2
